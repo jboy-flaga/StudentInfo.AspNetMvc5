@@ -6,8 +6,8 @@
     <ProjectGuid>{6C59715D-51D8-4150-9B64-ABCA8128EB66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StudentInfo.Web.Tests</RootNamespace>
-    <AssemblyName>StudentInfo.Web.Tests</AssemblyName>
+    <RootNamespace>StudentInfo.Specs</RootNamespace>
+    <AssemblyName>StudentInfo.Specs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
