@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace StudentInfo.Web.Models
+namespace StudentInfo.Domain.Model
 {
     public class Student
     {

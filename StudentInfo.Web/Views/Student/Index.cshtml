@@ -1,4 +1,4 @@
-﻿@model IEnumerable<StudentInfo.Web.Models.Student>
+﻿@model IEnumerable<StudentInfo.Domain.Model.Student>
 
 @{
     Layout = null;
@@ -13,10 +13,12 @@
 </head>
 <body>
     <div> 
+        <div>@Html.ActionLink("Add new student", "Add")</div>
         @foreach (var student in Model)
         {
             <div>@student.FirstName @student.LastName</div>
         }
+
     </div>
 </body>
 </html>

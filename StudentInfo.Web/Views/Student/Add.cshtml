@@ -1,0 +1,24 @@
+﻿@model StudentInfo.Domain.Model.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>FirstName: @Html.TextBoxFor(s => s.FirstName)</div>
+            <div>LastName: @Html.TextBoxFor(s => s.LastName)</div>
+            <div><input type="submit" value="Add" /></div>
+        }
+    </div>
+</body>
+</html>
