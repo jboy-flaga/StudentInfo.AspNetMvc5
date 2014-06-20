@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StudentInfo.Mvc5.Controllers;
+using StudentInfo.Web.Controllers;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
