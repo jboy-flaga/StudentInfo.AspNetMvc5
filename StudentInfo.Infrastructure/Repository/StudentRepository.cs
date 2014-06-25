@@ -10,7 +10,7 @@ namespace StudentInfo.Infrastructure.Repository
 {
     public class StudentRepository : IStudentRepository
     {
-        private ICollection<Student> _students = new List<Student>();
+        private static ICollection<Student> _students = new List<Student>();
 
         public IEnumerable<Domain.Model.Student> GetAll()
         {

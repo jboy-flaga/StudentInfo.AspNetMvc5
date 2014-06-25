@@ -42,7 +42,7 @@ namespace StudentInfo.Web.Controllers
 
             _studentRepository.Add(student);
 
-            return View("Index", _studentRepository.GetAll());
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,20 +1,12 @@
-﻿@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        @ViewBag.Message
+﻿
+<div class="jumbotron">
+    <div class="container">
+        <center>
+            <p>@ViewBag.Message</p>
+            <h1>Student Information System</h1>
+            <p>
+                @Html.ActionLink("Go to list of students.", "Index", "Student")
+            </p>
+        </center>
     </div>
-    <div>
-        @Html.ActionLink("Go to list of students.", "Index", "Student")
-    </div>
-</body>
-</html>
+</div>

@@ -1,24 +1,16 @@
 ﻿@model StudentInfo.Domain.Model.Student
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        @using (Html.BeginForm())
-        {
-            <div>FirstName: @Html.TextBoxFor(s => s.FirstName)</div>
-            <div>LastName: @Html.TextBoxFor(s => s.LastName)</div>
-            <div><input type="submit" value="Add" /></div>
-        }
-    </div>
-</body>
-</html>
+<div>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <span class="col-md-1">FirstName: </span>
+            <span class="col-md-2">@Html.TextBoxFor(s => s.FirstName)</span>
+        </div>
+        <div class="row">
+            <span class="col-md-1">LastName: </span>
+            <span class="col-md-2">@Html.TextBoxFor(s => s.LastName)</span>
+        </div>
+        <div class="row"><button type="submit" class="btn btn-primary col-md-1">Add</button></div>
+    }
+</div>
