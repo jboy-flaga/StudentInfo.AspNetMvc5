@@ -2,10 +2,10 @@
 using StudentInfo.Web.Controllers;
 using System.Web.Mvc;
 using System.Collections.Generic;
-using Xunit;
 using Moq;
 using StudentInfo.Infrastructure.Repository;
 using StudentInfo.Domain.Model;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
 {
@@ -22,6 +22,7 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
             //_studentController = new StudentController(_fakeStudentRepository.Object);
         }
 
+        [TestClass]
         public class When_the_index_view_is_loaded : StudentControllerTest
         {
             ViewResult _viewResult;
@@ -32,17 +33,18 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
                 _viewResult = _studentController.Index() as ViewResult;
             }
 
-            [Fact]
+            [TestMethod]
             public void it_displays_a_list_of_students()
             {
                 // assert
-                Assert.IsAssignableFrom<IEnumerable<Student>>(_viewResult.Model);
+                Assert.IsInstanceOfType(_viewResult.Model, typeof(IEnumerable<Student>));
             }
         }
 
+        [TestClass]
         public class When_adding_a_new_student : StudentControllerTest
         {
-            [Fact]
+            [TestMethod]
             public void first_name_is_required()
             {
                 // arrange
@@ -52,11 +54,11 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
                 var httpStatusCodeResult = _studentController.Add(studentWithEmptyFirstName) as HttpStatusCodeResult;
 
                 // assert
-                Assert.IsAssignableFrom<HttpStatusCodeResult>(httpStatusCodeResult);
-                Assert.Equal((int)System.Net.HttpStatusCode.BadRequest, httpStatusCodeResult.StatusCode);
+                Assert.IsInstanceOfType(httpStatusCodeResult, typeof(HttpStatusCodeResult));
+                Assert.AreEqual((int)System.Net.HttpStatusCode.BadRequest, httpStatusCodeResult.StatusCode);
             }
 
-            [Fact]
+            [TestMethod]
             public void last_name_is_required()
             {
                 // arrange
@@ -66,11 +68,11 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
                 var httpStatusCodeResult = _studentController.Add(studentWithEmptyLastName) as HttpStatusCodeResult;
 
                 // assert
-                Assert.IsAssignableFrom<HttpStatusCodeResult>(httpStatusCodeResult);
-                Assert.Equal((int)System.Net.HttpStatusCode.BadRequest, httpStatusCodeResult.StatusCode);
+                Assert.IsInstanceOfType(httpStatusCodeResult, typeof(HttpStatusCodeResult));
+                Assert.AreEqual((int)System.Net.HttpStatusCode.BadRequest, httpStatusCodeResult.StatusCode);
             }
 
-            [Fact]
+            [TestMethod]
             public void the_new_student_is_added_to_the_repository()
             {
 
@@ -82,20 +84,20 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
 
                 // assert
                 //_fakeStudentRepository.Verify(studRepo => studRepo.Add(It.IsAny<Student>()), Times.AtLeastOnce);
-                throw new NotImplementedException("uncomment the code above after adding dependency injection");
+                throw new NotImplementedException("TODO: uncomment the code above after adding dependency injection");
             }
 
-            [Fact]
+            [TestMethod]
             public void redirects_to_index_view()
             {
                 // arrange
                 var student = new Student() { FirstName = "Fname", LastName = "Lname" };
 
                 // act
-                var viewResult = _studentController.Add(student) as ViewResult;
+                var result = _studentController.Add(student) as RedirectToRouteResult;
 
                 // assert
-                Assert.Equal("Index", viewResult.ViewName);
+                Assert.AreEqual("Index", result.RouteValues["action"]);
             }
         }
     }
