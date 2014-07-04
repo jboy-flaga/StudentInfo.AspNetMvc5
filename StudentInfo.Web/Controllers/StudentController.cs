@@ -1,4 +1,5 @@
 ﻿using StudentInfo.Domain.Model;
+using StudentInfo.Domain.Repository;
 using StudentInfo.Infrastructure.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,11 @@ namespace StudentInfo.Web.Controllers
 {
     public class StudentController : Controller
     {
-        private StudentRepository _studentRepository;
+        private IStudentRepository _studentRepository;
 
-        public StudentController()
+        public StudentController(IStudentRepository studentRepository)
         {
-            _studentRepository = new StudentRepository();
+            _studentRepository = studentRepository;
 
         }
 

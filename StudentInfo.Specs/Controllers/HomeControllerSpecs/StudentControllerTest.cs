@@ -18,8 +18,7 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
         {
             // arrange
             _fakeStudentRepository = new Mock<StudentRepository>();
-            _studentController = new StudentController();
-            //_studentController = new StudentController(_fakeStudentRepository.Object);
+            _studentController = new StudentController(_fakeStudentRepository.Object);
         }
 
         [TestClass]
@@ -83,8 +82,7 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
                 var viewResult = _studentController.Add(student) as ViewResult;
 
                 // assert
-                //_fakeStudentRepository.Verify(studRepo => studRepo.Add(It.IsAny<Student>()), Times.AtLeastOnce);
-                throw new NotImplementedException("TODO: uncomment the code above after adding dependency injection");
+                _fakeStudentRepository.Verify(studRepo => studRepo.Add(It.IsAny<Student>()), Times.AtLeastOnce);
             }
 
             [TestMethod]
