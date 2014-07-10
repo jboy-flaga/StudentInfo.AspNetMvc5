@@ -1,6 +1,6 @@
 ﻿using Ninject;
 using StudentInfo.Domain.Repository;
-using StudentInfo.Infrastructure.Repository;
+using StudentInfo.Infrastructure.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;

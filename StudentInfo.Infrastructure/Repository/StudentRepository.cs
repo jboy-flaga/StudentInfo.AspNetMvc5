@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentInfo.Infrastructure.Repository
+namespace StudentInfo.Infrastructure.Data.Repository
 {
     public class StudentRepository : IStudentRepository
     {

@@ -89,9 +89,9 @@
       <Project>{1896ac84-6350-48de-8466-b10f0a8d18c4}</Project>
       <Name>StudentInfo.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StudentInfo.Infrastructure\StudentInfo.Infrastructure.csproj">
+    <ProjectReference Include="..\StudentInfo.Infrastructure\StudentInfo.Infrastructure.Data.csproj">
       <Project>{31a425a7-ee09-4ebc-bfee-0819a3f592e1}</Project>
-      <Name>StudentInfo.Infrastructure</Name>
+      <Name>StudentInfo.Infrastructure.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\StudentInfo.Web\StudentInfo.Web.csproj">
       <Project>{35649195-F5DC-40DF-8E28-6BA9057FAA63}</Project>

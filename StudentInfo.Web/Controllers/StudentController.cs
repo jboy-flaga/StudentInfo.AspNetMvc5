@@ -1,6 +1,6 @@
 ﻿using StudentInfo.Domain.Model;
 using StudentInfo.Domain.Repository;
-using StudentInfo.Infrastructure.Repository;
+using StudentInfo.Infrastructure.Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;

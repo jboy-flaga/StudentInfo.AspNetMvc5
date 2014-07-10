@@ -1,0 +1,3 @@
+﻿
+Julie Lerman recommends putting each DbContext class to saparate projects because she said name conflicts might occur even when you have differenct namespaces.
+You can then put the database mappings/configuration in a separate project and reference it in you contexts projects.

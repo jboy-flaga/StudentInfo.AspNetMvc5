@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.Specs", "Studen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.Domain", "StudentInfo.Domain\StudentInfo.Domain.csproj", "{1896AC84-6350-48DE-8466-B10F0A8D18C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.Infrastructure", "StudentInfo.Infrastructure\StudentInfo.Infrastructure.csproj", "{31A425A7-EE09-4EBC-BFEE-0819A3F592E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.Infrastructure.Data", "StudentInfo.Infrastructure\StudentInfo.Infrastructure.Data.csproj", "{31A425A7-EE09-4EBC-BFEE-0819A3F592E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.DatabaseInitialization", "StudentInfo.DatabaseInitialization\StudentInfo.DatabaseInitialization.csproj", "{E965EEF1-0A59-45AF-AD53-58F087EDDEB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo.Infrastructure.Data.Mapping", "StudentInfo.Infrastructure.Data.Mapping\StudentInfo.Infrastructure.Data.Mapping.csproj", "{B84F2A0D-E6D5-406C-B03C-45B5646DB605}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{31A425A7-EE09-4EBC-BFEE-0819A3F592E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31A425A7-EE09-4EBC-BFEE-0819A3F592E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31A425A7-EE09-4EBC-BFEE-0819A3F592E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E965EEF1-0A59-45AF-AD53-58F087EDDEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E965EEF1-0A59-45AF-AD53-58F087EDDEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E965EEF1-0A59-45AF-AD53-58F087EDDEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E965EEF1-0A59-45AF-AD53-58F087EDDEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84F2A0D-E6D5-406C-B03C-45B5646DB605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84F2A0D-E6D5-406C-B03C-45B5646DB605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84F2A0D-E6D5-406C-B03C-45B5646DB605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84F2A0D-E6D5-406C-B03C-45B5646DB605}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

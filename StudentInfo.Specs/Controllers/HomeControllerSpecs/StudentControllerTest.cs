@@ -3,7 +3,7 @@ using StudentInfo.Web.Controllers;
 using System.Web.Mvc;
 using System.Collections.Generic;
 using Moq;
-using StudentInfo.Infrastructure.Repository;
+using StudentInfo.Infrastructure.Data.Repository;
 using StudentInfo.Domain.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
