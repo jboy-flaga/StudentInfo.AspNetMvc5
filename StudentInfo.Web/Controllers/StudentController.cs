@@ -11,18 +11,18 @@ namespace StudentInfo.Web.Controllers
 {
     public class StudentController : Controller
     {
-        private IStudentRepository _studentRepository;
+        private IRegistrationRepository _registrationRepository;
 
-        public StudentController(IStudentRepository studentRepository)
+        public StudentController(IRegistrationRepository registrationRepository)
         {
-            _studentRepository = studentRepository;
+            _registrationRepository = registrationRepository;
 
         }
 
         // GET: Student
         public ActionResult Index()
         {
-            var students = _studentRepository.GetAll();
+            var students = _registrationRepository.GetAllStudents();
 
             return View(students);
         }
@@ -41,7 +41,8 @@ namespace StudentInfo.Web.Controllers
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
 
-            _studentRepository.Add(student);
+            _registrationRepository.Register(student);
+            _registrationRepository.Save();
 
             return RedirectToAction("Index");
         }

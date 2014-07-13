@@ -10,7 +10,7 @@ namespace StudentInfo.Domain.Model
     {
         public int Id { get; set; }
         public int RegistrationId { get; set; }
-        public virtual Registration Registration { get; set; }
+        public virtual EnrollmentRecord Registration { get; set; }
 
         public DateTime DateAndTimeOfPayment { get; set; }
         public decimal Amount { get; set; }

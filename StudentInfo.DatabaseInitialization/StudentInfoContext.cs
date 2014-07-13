@@ -21,7 +21,7 @@ namespace StudentInfo.DatabaseInitialization
         { }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Registration> Registrations { get; set; }
+        public DbSet<EnrollmentRecord> Registrations { get; set; }
         public DbSet<PaymentRecord> PaymentRecords { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<GradeRecord> GradeRecords { get; set; }

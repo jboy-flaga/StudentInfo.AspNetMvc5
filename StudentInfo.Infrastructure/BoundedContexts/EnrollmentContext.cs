@@ -7,6 +7,6 @@ namespace StudentInfo.Infrastructure.Data.BoundedContexts
     public class EnrollmentContext : BaseContext<EnrollmentContext>
     {
         public DbSet<Student> Students { get; set; }
-        public DbSet<Registration> Registrations { get; set; }
+        public DbSet<EnrollmentRecord> Registrations { get; set; }
     }
 }

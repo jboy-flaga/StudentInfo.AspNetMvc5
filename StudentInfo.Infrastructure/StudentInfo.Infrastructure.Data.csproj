@@ -50,7 +50,8 @@
     <Compile Include="BoundedContexts\BillingContext.cs" />
     <Compile Include="BoundedContexts\EnrollmentContext.cs" />
     <Compile Include="BoundedContexts\GradesContext.cs" />
-    <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="BoundedContexts\RegistrationContext.cs" />
+    <Compile Include="Repository\RegistrationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

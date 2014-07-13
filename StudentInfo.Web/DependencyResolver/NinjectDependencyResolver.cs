@@ -25,7 +25,7 @@ namespace StudentInfo.Web.DependencyResolver
         }
         private void AddBindings()
         {
-            kernel.Bind<IStudentRepository>().To<StudentRepository>();
+            kernel.Bind<IRegistrationRepository>().To<RegistrationRepository>();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace StudentInfo.Infrastructure.Data.Mapping
         public GradeRecordDbMap()
         {
             // Primary Key
-            this.HasKey(t => new { t.RegistrationId, t.SubjectId });
+            this.HasKey(t => new { t.EnrollmentRecordId, t.SubjectId });
         }
     }
 }

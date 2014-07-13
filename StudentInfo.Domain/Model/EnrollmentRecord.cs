@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentInfo.Domain.Model
 {
-    public class Registration
+    public class EnrollmentRecord
     {
-        public int RegistrationId { get; set; }
+        public int EnrollmentRecordId { get; set; }
         public int StudentId { get; set; }
         public DateTime DateOfRegistration { get; set; }
         public int DegreeId { get; set; }

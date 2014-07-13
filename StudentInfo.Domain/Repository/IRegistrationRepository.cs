@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace StudentInfo.Domain.Repository
 {
-    public interface IStudentRepository
+    public interface IRegistrationRepository
     {
-        IEnumerable<Student> GetAll();
-        void Add(Student newStudent);
+        void Register(Student student);
+        IEnumerable<Student> GetAllStudents();
+        void Save();
     }
 }

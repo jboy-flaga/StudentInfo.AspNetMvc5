@@ -1,5 +1,6 @@
 namespace StudentInfo.DatabaseInitialization.Migrations
 {
+    using StudentInfo.Domain.Model;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -27,6 +28,11 @@ namespace StudentInfo.DatabaseInitialization.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Students.AddOrUpdate(
+                s => new { s.FirstName, s.LastName },
+                new Student { FirstName = "Jboy", LastName = "Flaga"}
+            );
         }
     }
 }

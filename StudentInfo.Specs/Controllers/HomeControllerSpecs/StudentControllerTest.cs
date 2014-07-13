@@ -6,19 +6,20 @@ using Moq;
 using StudentInfo.Infrastructure.Data.Repository;
 using StudentInfo.Domain.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StudentInfo.Domain.Repository;
 
 namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
 {
     public partial class StudentControllerTest
     {
         StudentController _studentController;
-        Mock<StudentRepository> _fakeStudentRepository;
+        Mock<IRegistrationRepository> _fakeRegistrationRepository;
 
         public StudentControllerTest()
         {
             // arrange
-            _fakeStudentRepository = new Mock<StudentRepository>();
-            _studentController = new StudentController(_fakeStudentRepository.Object);
+            _fakeRegistrationRepository = new Mock<IRegistrationRepository>();
+            _studentController = new StudentController(_fakeRegistrationRepository.Object);
         }
 
         [TestClass]
@@ -82,7 +83,7 @@ namespace StudentInfo.Specs.Controllers.HomeControllerSpecs
                 var viewResult = _studentController.Add(student) as ViewResult;
 
                 // assert
-                _fakeStudentRepository.Verify(studRepo => studRepo.Add(It.IsAny<Student>()), Times.AtLeastOnce);
+                _fakeRegistrationRepository.Verify(studRepo => studRepo.Register(It.IsAny<Student>()), Times.AtLeastOnce);
             }
 
             [TestMethod]
